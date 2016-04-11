@@ -1,3 +1,8 @@
+<div id="things-go-here"></div>
+<div id="load-more-posts">
+	<h4>Load More</h4>
+</div>
+
 <?php $nonce = wp_create_nonce('extra-special'); ?>
 <script>
 offset = 10;
