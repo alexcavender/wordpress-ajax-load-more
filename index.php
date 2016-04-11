@@ -1,3 +1,4 @@
+<?php $nonce = wp_create_nonce('extra-special'); ?>
 <script>
 offset = 10;
 jQuery('#load-more-posts').click(function() {
