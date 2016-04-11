@@ -1,9 +1,9 @@
 # What is this?
 This snippet lets you load more blog posts with AJAX in WordPress. 
 
-##How this snippet works
-Add the function inside functions.php to the bottom of your theme's functions.php file
-Add the code from index.php to your theme's index.php , direclty before  <?php get_footer(); ?> 
+## Setup
+1.) Add the function inside functions.php to the bottom of your theme's functions.php file
+2.) Add the code from index.php to your theme's index.php , direclty before  <?php get_footer(); ?> 
 
 ###How to Edit the number of posts loaded
 Let's say your main blog loads 5 of the latest posts.
