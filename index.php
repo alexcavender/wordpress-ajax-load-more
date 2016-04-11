@@ -17,7 +17,7 @@ jQuery('#load-more-posts').click(function() {
 		if (response !== ''){
 			jQuery('#things-go-here').append(response);
 
-			offset = offset +10;
+			offset = offset + offset;
 			jQuery('#things-go-here').css('opacity', '1');
 			jQuery('#load-more-posts').html('<h4>Load More</h4><img src="/wp-content/themes/usminteractive/images/anchor-dark.svg">');
 		} 
