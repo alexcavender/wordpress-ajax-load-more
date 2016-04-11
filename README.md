@@ -6,4 +6,6 @@ Add the code from functions.php to the bottom of your theme's functions.php file
 
 
 ###How to Edit the number of posts loaded
-change 'posts_per_page' from 10 to another number
+Let's say your main blog loads 5 of the latest posts.
+Within functions.php, change 'posts_per_page' from 10 to 5
+In your index.php change offset from 10 to 5
