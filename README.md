@@ -9,5 +9,5 @@ This snippet lets you load more blog posts with AJAX in WordPress.
 By default , the snippet gets the next 10 posts
 #####What if your blog is set up to load 5 of your latest posts?
 
-#####1.) Within the function load_more_posts in functions.php, change 'posts_per_page' from 10 to 5
-#####2.) In your index.php, inside <script>  change offset from 10 to 5
+1. Within the function load_more_posts in functions.php, change 'posts_per_page' from 10 to 5
+2. In your index.php, inside <script>  change offset from 10 to 5
