@@ -15,3 +15,7 @@ By default , the snippet gets the next 10 posts
 ###How do I style the blog posts that are loaded?
 
 1. Everything inside the <article> tag within functions.php can be customized (lines 24-32) Examples include grabbing the post thumbnail  the_post_thumbnail() and any wordpress template tags one would traditionally use.
+
+### Will this work with my theme?
+
+1. This should work with any WordPress theme. it has been designed to work out of the box with any underscores theme
