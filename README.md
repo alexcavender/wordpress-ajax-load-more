@@ -11,3 +11,7 @@ By default , the snippet gets the next 10 posts
 
 1. In the function load_more_posts, change 'posts_per_page' from 10 to 5
 2. In your index.php, inside <script>  change offset from 10 to 5
+
+###How do I style the blog posts that are loaded?
+
+1. Everything inside the <article> tag within functions.php can be customized (lines 24-32) Examples include grabbing the post thumbnail  the_post_thumbnail() and any wordpress template tags one would traditionally use.
