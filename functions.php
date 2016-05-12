@@ -1,3 +1,4 @@
+<?php
 function load_more_posts() {
 	$nonce_check = check_ajax_referer( 'extra-special', 'security' );
 	
