@@ -19,4 +19,4 @@ By default , the snippet gets the next 10 posts
 
 ### Will this work with my theme?
 
-1. This should work with any WordPress theme. it has been designed to work out of the box with any underscores theme
+1. This should work with any WordPress theme. Of course, there will be exceptions especially on large themes that have lots of custom code. It has been designed to work out of the box with any underscores based theme.
