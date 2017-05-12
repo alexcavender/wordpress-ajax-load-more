@@ -25,7 +25,7 @@ function load_more_posts() {
 				?>
 				<article>
 
-					<a href="<?php echo get_permalink(); ?>">
+					<a href="<?php echo esc_urL( get_permalink() ); ?>">
 						<h2><?php the_title(); ?></h2>
 					</a>
 					
