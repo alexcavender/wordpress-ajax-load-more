@@ -2,46 +2,45 @@
 function load_more_posts() {
 	$nonce_check = check_ajax_referer( 'extra-special', 'security' );
 	
-	if ( $nonce_check ){ 
+	if ( ! $nonce_check ) { 
+		return;
+	}
 
-		$offset = $_POST['offset'];
-	
-		$args = array(
-			'post_type'      => 'post',
-			'post_status'    => 'publish',
-			'posts_per_page' => '10',
-			'orderby'	 => 'date',
-			'order'	 	 => 'DESC',
-			'offset'	 => $offset,
-		);
+	$offset = $_POST['offset'];
 
-		$loop = new WP_Query($args);
+	$args = array(
+		'post_type'      => 'post',
+		'post_status'    => 'publish',
+		'posts_per_page' => '10',
+		'orderby'	 => 'date',
+		'order'	 	 => 'DESC',
+		'offset'	 => $offset,
+	);
 
-		if ( $loop->have_posts() ){
-		
-			while( $loop->have_posts() ){
-				$loop->the_post();
+	$loop = new WP_Query($args);
 
-				?>
-				<article>
+	if ( $loop->have_posts() ){
 
-					<a href="<?php echo esc_url( get_permalink() ); ?>">
-						<h2><?php the_title(); ?></h2>
-					</a>
-					
-					<?php the_excerpt(); ?>
+		while( $loop->have_posts() ){
+			$loop->the_post();
 
-				</article>
-				<?php
+			?>
+			<article>
 
-			}
-			wp_reset_postdata();
+				<a href="<?php echo esc_url( get_permalink() ); ?>">
+					<h2><?php the_title(); ?></h2>
+				</a>
+
+				<?php the_excerpt(); ?>
+
+			</article>
+			<?php
+
 		}
-		wp_die();
+		wp_reset_postdata();
 	}
-	else {
-		exit();
-	}
+	wp_die();
+	
 }
 add_action( 'wp_ajax_load_more_posts', 'load_more_posts' );
 add_action( 'wp_ajax_nopriv_load_more_posts', 'load_more_posts' );
