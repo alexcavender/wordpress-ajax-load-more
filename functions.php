@@ -8,14 +8,14 @@ function load_more_posts() {
 
 	$offset = $_POST['offset'];
 
-	$args = array(
+	$args = [
 		'post_type'      => 'post',
 		'post_status'    => 'publish',
 		'posts_per_page' => '10',
 		'orderby'	 => 'date',
 		'order'	 	 => 'DESC',
 		'offset'	 => $offset,
-	);
+	];
 
 	$loop = new WP_Query($args);
 
